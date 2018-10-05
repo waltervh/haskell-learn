@@ -36,4 +36,4 @@ hofF = 1 : zipWith (-) [1..] (map (\x -> genericIndex hofM x) hofF)
 hofQ :: [Integer]
 hofQ = 1 : 1 : zipWith (+) (map applyQ (zipWith (-) [2..] (tail hofQ)))
                            (map applyQ (zipWith (-) [2..] hofQ))
-    where applyQ = \x -> genericIndex hofQ x
+    where applyQ = genericIndex hofQ
